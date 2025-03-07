@@ -1,0 +1,2 @@
+PacketID,EgressPort,PacketSize,Priority,DSCP,Color,VLANID,Sport,Dport
+0,2,20,0,0,2,0,0,0
