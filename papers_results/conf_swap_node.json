@@ -1,0 +1,12 @@
+{
+    "tmconfig": {
+        "tmnodes": [
+            {
+                "tmnode": 3,
+                "port": 1,
+                "children": 0,
+                "scheduler": "FIFO"
+            }
+        ]
+    }
+}
