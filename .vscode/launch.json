@@ -1,0 +1,139 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "newcas_drr",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/targets/simple_switch_grpc/.libs/simple_switch_grpc",
+            "args": [
+                "-i 0@veth0",
+                "-i 1@veth1",
+                // "--debugger",
+                "--log-console",
+                // // "${workspaceFolder}/targets/simple_switch_grpc/forwarding.json"
+                "${env:HOME}/Documents/P4/newcas_results/forwarding.json",
+                "--",
+                "--load-modules=${workspaceFolder}/targets/simple_switch/extern/interface_tm.so"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:HOME}/Documents/sudo_gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "vlan_tagging+veth+ext",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/targets/simple_switch_grpc/.libs/simple_switch_grpc",
+            "args": [
+                "-i 0@veth0",
+                "-i 1@veth1",
+                // "--debugger",
+                "--log-console",
+                // // "${workspaceFolder}/targets/simple_switch_grpc/forwarding.json"
+                "${env:HOME}/Documents/P4/vlan_tagging/8021q_proto.json",
+                "--",
+                "--load-modules=${workspaceFolder}/targets/simple_switch/extern/interface_tm.so"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:HOME}/Documents/sudo_gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "ss_grpc+veth+extern",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/targets/simple_switch_grpc/.libs/simple_switch_grpc",
+            "args": [
+                "-i 0@veth0",
+                "-i 1@veth1",
+                // "--debugger",
+                "--log-console",
+                // // "${workspaceFolder}/targets/simple_switch_grpc/forwarding.json"
+                "${env:HOME}/Documents/P4/validation/forwarding.json",
+                "--",
+                "--load-modules=${workspaceFolder}/targets/simple_switch/extern/interface_tm.so"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:HOME}/Documents/sudo_gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "ss_grpc+veth",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/targets/simple_switch_grpc/.libs/simple_switch_grpc",
+            "args": [ 
+                "-i 0@veth0",
+                "-i 1@veth1",
+                // "--debugger",
+                "--log-console",
+                // // "${workspaceFolder}/targets/simple_switch_grpc/forwarding.json"
+                "${env:HOME}/Documents/P4/validation/forwarding.json"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:HOME}/Documents/sudo_gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

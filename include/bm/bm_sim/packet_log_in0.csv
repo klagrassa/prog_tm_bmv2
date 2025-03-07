@@ -1,0 +1,2 @@
+Timestamp,PacketID,EgressPort,PacketSize,Priority,DSCP,Color,VLANID,Sport,Dport
+14:59:41.0100,0,28,0,0,0,0,0,0
